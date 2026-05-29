@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+    depends_on:
+      - postgres
+      - mqtt
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: agriautonomous
+      POSTGRES_USER: agri
+      POSTGRES_PASSWORD: agri_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  mqtt:
+    image: eclipse-mosquitto:latest
+    ports:
+      - "1883:1883"
+
+volumes:
+  postgres_data:

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agriautonomous-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: agriautonomous-backend
+  template:
+    metadata:
+      labels:
+        app: agriautonomous-backend
+    spec:
+      containers:
+      - name: backend
+        image: agriautonomous:latest
+        ports:
+        - containerPort: 5000
