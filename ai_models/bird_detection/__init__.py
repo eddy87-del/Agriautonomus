@@ -1,0 +1,1 @@
+"""Bird detection AI model"""

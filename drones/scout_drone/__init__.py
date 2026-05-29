@@ -1,0 +1,1 @@
+"""Drone scout package"""
