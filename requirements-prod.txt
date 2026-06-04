@@ -1,0 +1,60 @@
+# Production Dependencies Only
+# Use this for deployed/production environments
+# Install with: pip install -r requirements-prod.txt
+
+# Core GUI Framework
+PyQt5==5.15.7
+PyQtWebEngine==5.15.7
+
+# Hardware & Communication
+PySerial==3.5
+paho-mqtt==1.6.1
+modbus-tk==0.1.1
+
+# Logging
+loguru==0.7.0
+
+# CLI Tools
+click==8.1.7
+
+# Data Processing
+numpy==1.24.3
+opencv-python==4.8.0.76
+pillow==10.0.0
+scikit-learn==1.3.1
+pandas==2.0.3
+scipy==1.11.2
+
+# Live Radar & Weather
+requests==2.31.0
+folium==0.14.0
+pyproj==3.6.0
+python-dateutil==2.8.2
+
+# Database
+sqlalchemy==2.0.20
+
+# Async Support
+aiohttp==3.8.5
+
+# GPS & Location
+geopy==2.3.0
+
+# Visualization
+matplotlib==3.7.2
+plotly==5.16.1
+
+# Configuration
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Security
+cryptography==41.0.3
+
+# Performance
+cython==0.29.36
+numba==0.57.1
+
+# Web Server
+flask==2.3.3
+flask-cors==4.0.0
